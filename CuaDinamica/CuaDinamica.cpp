@@ -1,10 +1,12 @@
 // ENTRADA: Si
 // SORTIDA: Aquest programa permet encuar i desencuar fitxes d'una cua, i mostrar la primera o tota la cua.
 // Pau Arqueros i Sureda 2022
+
 #include <iostream>
 using namespace std;
 #include "Cua.h"
 
+// ACCIONS I FUNCIONS
 int introduir_opcio()
 {
 	cout << "Introdueix opcio: ";
@@ -31,6 +33,7 @@ void mostrar_menu()
 	cout << "6) Sortir" << endl;
 }
 
+// MAIN
 int main()
 {
 	Cua c;
@@ -43,7 +46,7 @@ int main()
 		else if (opcio == 3) 
 		{
 			c.primera(); 
-			cout << endl;
+			cout << endl; // ESTETICA
 		}
 		else if (opcio == 4) c.mostrar();
 		else if (opcio == 5) mostrar_menu();
