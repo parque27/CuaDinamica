@@ -4,10 +4,14 @@ using namespace std;
 
 int introduir_opcio()
 {
-	int o;
-	cout << "Opcio: ";
-	cin >> o;
-	return o;
+	cout << "Introdueix opcio: ";
+	int opcio; cin >> opcio;
+	while (opcio < 1 or opcio > 6)
+	{
+		cout << "Introdueix opcio: ";
+		cin >> opcio;
+	}
+	return opcio;
 }
 void encua(Cua& c)
 {
