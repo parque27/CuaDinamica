@@ -14,11 +14,13 @@ Cua::Cua(const Cua& o)
 	a_primera = a_ultima = NULL;
 	copia(o);
 }
+
 // DESTRUCTOR
 Cua::~Cua()
 {
 	allibera();
 }
+
 // OPERADORS
 Cua& Cua::operator=(const Cua& o)
 {
@@ -29,6 +31,7 @@ Cua& Cua::operator=(const Cua& o)
 	}
 	return *this;
 }
+
 // METODES CONSULTORS
 bool Cua::es_buida() const
 {
@@ -50,6 +53,7 @@ void Cua::mostrar() const
 	delete p;
 	cout << endl; // ESTETICA
 }
+
 // METODES MODIFICADORS
 void Cua::encua(Fitxa fitxa)
 {
@@ -71,6 +75,7 @@ void Cua::desencua()
 	else a_primera = a_primera->seg;
 	delete aux;
 }
+
 // METODES D'INSTNACIA
 void Cua::copia(const Cua& o)
 {
