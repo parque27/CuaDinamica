@@ -34,9 +34,21 @@ bool Cua::es_buida() const
 {
 	return a_primera == NULL;
 }
-Fitxa Cua::primera() const
+void Cua::primera() const
 {
-	return a_primera->f;
+	return a_primera->f.mostra();
+}
+void Cua::mostrar() const
+{
+	Node* p = new Node;
+	p = a_primera;
+	while (p != NULL)
+	{
+		p->f.mostra(); cout << "   ";
+		p = p->seg;
+	}
+	delete p;
+	cout << endl; // ESTETICA
 }
 // METODES MODIFICADORS
 void Cua::encua(Fitxa fitxa)

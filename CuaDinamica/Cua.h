@@ -7,6 +7,7 @@ class Cua
 	// DESCRIPCCIO:
 	// INVARIABLE:
 	public:
+
 		// CONSTRUCTORS
 		Cua();
 		// Pre: --; Post: cua buida
@@ -24,9 +25,11 @@ class Cua
 		// METODES CONSULTORS
 		bool es_buida() const;
 		// Pre: --; Post: retorna true si la cua es buida, fals altrament
-		Fitxa primera() const;
-		// Pre: cua no buida; Post: retorna una copia del primer element de la cua
-
+		void primera() const;
+		// Pre: cua no buida; Post: mostra la fitxa que esta la primera de la cua
+		void mostrar() const;
+		// Pre: --; Post: mostra les fitxes que estan encuades
+		
 		// METODES MODIFICADORS
 		void encua(Fitxa f);
 		// Pre: --; Post: ha afegit la fitxa f al final de la cua
