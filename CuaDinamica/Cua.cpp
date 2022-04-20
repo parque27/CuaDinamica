@@ -6,7 +6,7 @@ using namespace std;
 // CONSTRUCTOR PER DEFECTE
 Cua::Cua()
 {
-	a_primera = a_ultima = NULL;
+	a_primera = a_ultima = NULL; // El primer node és igual a l'últim, que apunta a NULL. Per tant, tot és NULL.
 }
 // CONSTRUCTOR COPIA
 Cua::Cua(const Cua& o)
@@ -18,7 +18,7 @@ Cua::Cua(const Cua& o)
 // DESTRUCTOR
 Cua::~Cua()
 {
-	allibera();
+	allibera(); // El destructor crida a una funció privada que allibera la memòria.
 }
 
 // OPERADORS
@@ -35,14 +35,15 @@ Cua& Cua::operator=(const Cua& o)
 // METODES CONSULTORS
 bool Cua::es_buida() const
 {
-	return a_primera == NULL;
+	return a_primera == NULL; // Retornem true si el primer node apunta a NULL, fals altrament.
 }
 void Cua::primera() const
 {
-	return a_primera->f.mostra();
+	a_primera->f.mostra(); // Cridem la acció mostra() de la fitxa del primer node de la cua.
 }
 void Cua::mostrar() const
 {
+
 	Node* p = new Node;
 	p = a_primera;
 	while (p != NULL)
